@@ -17,7 +17,7 @@ final public class Logger: ILogger {
     private init(category: LogCategory, debugLogState: LogState) {
         self.category = category
         self.debugLogState = debugLogState
-        let subsystem = "Podcastle"
+        let subsystem = "RenderForest"
         log = OSLog(subsystem: subsystem, category: category.rawValue)
     }
 
