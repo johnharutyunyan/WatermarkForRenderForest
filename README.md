@@ -6,3 +6,5 @@ Write a simple application that puts a moving watermark on the video and can exp
 -Watermark must move in the rectangular manner (see attached Image). 
 -The watermark does 3 (can be customizable) full rotations for the whole duration of the video.
 -UI is up to you. Please use native solutions and utilize AVFoundation.
+
+<img width="711" alt="image" src="https://github.com/johnharutyunyan/WatermarkForRenderForest/assets/26871856/31978fea-39be-4e16-9b26-111d2c9b378a">
