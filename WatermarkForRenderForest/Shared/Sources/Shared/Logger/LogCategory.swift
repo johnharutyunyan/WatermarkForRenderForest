@@ -10,13 +10,7 @@ import Foundation
 public enum LogCategory: String {
     case businessRule = "BUSINESS_RULE"
     case ui = "UI"
-    case server = "SERVER"
-    case media = "MEDIA"
-    case upload = "UPLOAD"
-    case subscription = "SUBSCRIPTION"
-    case application = "APPLICATION"
     case navigation = "NAVIGATION"
-    case parsing = "DATA PARSING"
 }
 
 public enum LogType: Int {

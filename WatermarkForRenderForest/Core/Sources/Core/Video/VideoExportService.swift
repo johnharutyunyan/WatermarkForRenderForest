@@ -67,12 +67,12 @@ public final class VideoExportService: IVideoExportService {
     private func saveVideoToPhotoLibrary(_ videoURL: URL) {
         PHPhotoLibrary.shared().performChanges({
             PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: videoURL)
-        }) { success, error in
+        }) { [weak self] success, error in
             if success {
-                print("Video saved to Photo Library successfully.")
+                self?.logger.logMessage(type: .info, message: "Video saved to Photo Library successfully.")
             } else {
                 if let error = error {
-                    print("Error saving video to Photo Library: \(error)")
+                    self?.logger.logMessage(type: .error, message: error.localizedDescription)
                 }
             }
         }
