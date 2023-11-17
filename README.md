@@ -1,5 +1,6 @@
 # Watermark on Video
 
+## Challenging parts
 - Adding a Watermark Layer in Playback: Adjusting for video orientation (portrait or landscape) to correctly place the watermark.
 - Video Export Issues: Transforming portrait videos that were automatically saved as landscape, ensuring correct export functionality.
 
