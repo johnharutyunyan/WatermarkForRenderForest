@@ -15,4 +15,5 @@
 - Second Screen: Offers watermark selection, play/pause, and seek functionalities with a moving watermark demonstration.
 - Export Functionality: Includes an export button that saves videos in mp4 format, with potential adaptation for .mov format.
 
-<img width="711" alt="image" src="https://github.com/johnharutyunyan/WatermarkForRenderForest/assets/26871856/31978fea-39be-4e16-9b26-111d2c9b378a">
+<img width="934" alt="image" src="https://github.com/johnharutyunyan/WatermarkForRenderForest/assets/26871856/ce007a85-3f10-4122-9870-3f19350802d1">
+
