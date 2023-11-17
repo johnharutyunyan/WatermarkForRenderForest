@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select Video View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SelectVideoViewController" id="Y6W-OH-hqX" customClass="SelectVideoViewController" customModule="WatermarkForRenderForest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFb-rp-Pqw">
+                                <rect key="frame" x="136.66666666666666" y="407.66666666666669" width="119.99999999999997" height="37"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Select Video"/>
+                                <connections>
+                                    <action selector="selectVideoAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Or1-G9-TbV"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="sze-Ys-A1V">
+                                <rect key="frame" x="18" y="544.66666666666663" width="357" height="31"/>
+                                <connections>
+                                    <action selector="rotationSliderValueChangedWithSender:" destination="Y6W-OH-hqX" eventType="valueChanged" id="2qO-EF-B7q"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rotations count: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4Q-TA-C5i">
+                                <rect key="frame" x="237" y="513.66666666666663" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V4Q-TA-C5i" firstAttribute="trailing" secondItem="sze-Ys-A1V" secondAttribute="trailing" id="2Ob-Zi-Ena"/>
+                            <constraint firstItem="sze-Ys-A1V" firstAttribute="top" secondItem="V4Q-TA-C5i" secondAttribute="bottom" constant="10" id="2uc-RE-jPY"/>
+                            <constraint firstItem="sze-Ys-A1V" firstAttribute="top" secondItem="oFb-rp-Pqw" secondAttribute="bottom" constant="100" id="7nf-Pv-Ev5"/>
+                            <constraint firstItem="sze-Ys-A1V" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Ahv-Pf-Z4W"/>
+                            <constraint firstItem="oFb-rp-Pqw" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="IPq-oA-USx"/>
+                            <constraint firstItem="oFb-rp-Pqw" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Jj1-gd-tee"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sze-Ys-A1V" secondAttribute="trailing" constant="20" id="bdu-36-PvD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="rotationsLabel" destination="V4Q-TA-C5i" id="Ob4-4c-3vz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

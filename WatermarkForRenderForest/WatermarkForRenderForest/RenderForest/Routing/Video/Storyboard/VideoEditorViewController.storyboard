@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video Editor View Controller-->
+        <scene sceneID="7Ik-w3-UPa">
+            <objects>
+                <viewController storyboardIdentifier="VideoEditorViewController" id="fbS-Py-Tw8" customClass="VideoEditorViewController" customModule="WatermarkForRenderForest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PdT-Yd-55z">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4q-3I-1mZ">
+                                <rect key="frame" x="20" y="114" width="353" height="404"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3So-nP-TrB">
+                                <rect key="frame" x="124.66666666666669" y="652" width="144" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="SoP-PS-3wU"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Select Watermark">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectImage" destination="fbS-Py-Tw8" eventType="touchUpInside" id="5DH-7X-foY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdC-No-RFe">
+                                <rect key="frame" x="320" y="50" width="53" height="34"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Export">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="exportAction" destination="fbS-Py-Tw8" eventType="touchUpInside" id="yz8-2q-0LP"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eZW-NA-O0P">
+                                <rect key="frame" x="0.0" y="518" width="393" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqB-tI-heV">
+                                        <rect key="frame" x="176.66666666666666" y="10" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Qpa-ua-WlX"/>
+                                            <constraint firstAttribute="height" constant="40" id="oKj-HR-Otu"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="play">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <state key="selected" image="pause">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playPauseAction" destination="fbS-Py-Tw8" eventType="touchUpInside" id="2jM-6O-mll"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="YqB-tI-heV" firstAttribute="centerY" secondItem="eZW-NA-O0P" secondAttribute="centerY" id="06O-at-wj1"/>
+                                    <constraint firstAttribute="height" constant="60" id="huA-gu-1hI"/>
+                                    <constraint firstItem="YqB-tI-heV" firstAttribute="centerX" secondItem="eZW-NA-O0P" secondAttribute="centerX" id="mDb-nf-Yrw"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2ox-wo-kb1">
+                                <rect key="frame" x="38" y="588" width="317" height="31"/>
+                                <connections>
+                                    <action selector="sliderChangedAction" destination="fbS-Py-Tw8" eventType="valueChanged" id="VOP-D5-5Xw"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6qt-xd-oFo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3So-nP-TrB" secondAttribute="bottom" id="4BC-rE-E1e"/>
+                            <constraint firstItem="6qt-xd-oFo" firstAttribute="trailing" secondItem="sdC-No-RFe" secondAttribute="trailing" constant="20" id="D6C-ez-Be1"/>
+                            <constraint firstItem="D4q-3I-1mZ" firstAttribute="top" secondItem="6qt-xd-oFo" secondAttribute="top" constant="55" id="Iap-3x-Xqu"/>
+                            <constraint firstItem="3So-nP-TrB" firstAttribute="centerX" secondItem="PdT-Yd-55z" secondAttribute="centerX" id="LHz-nZ-76c"/>
+                            <constraint firstItem="sdC-No-RFe" firstAttribute="top" secondItem="PdT-Yd-55z" secondAttribute="top" constant="50" id="c6u-HL-lUx"/>
+                            <constraint firstItem="D4q-3I-1mZ" firstAttribute="leading" secondItem="6qt-xd-oFo" secondAttribute="leading" constant="20" id="dSd-e1-Unl"/>
+                            <constraint firstItem="2ox-wo-kb1" firstAttribute="top" secondItem="eZW-NA-O0P" secondAttribute="bottom" constant="10" id="hx7-eQ-os9"/>
+                            <constraint firstItem="2ox-wo-kb1" firstAttribute="leading" secondItem="6qt-xd-oFo" secondAttribute="leading" constant="40" id="i9I-DM-Wao"/>
+                            <constraint firstItem="6qt-xd-oFo" firstAttribute="bottom" secondItem="D4q-3I-1mZ" secondAttribute="bottom" constant="300" id="iZa-R0-ktS"/>
+                            <constraint firstItem="eZW-NA-O0P" firstAttribute="leading" secondItem="6qt-xd-oFo" secondAttribute="leading" id="kpG-TN-Hzv"/>
+                            <constraint firstItem="6qt-xd-oFo" firstAttribute="trailing" secondItem="D4q-3I-1mZ" secondAttribute="trailing" constant="20" id="lwN-mE-FNA"/>
+                            <constraint firstItem="sdC-No-RFe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6qt-xd-oFo" secondAttribute="leading" symbolic="YES" id="mMZ-1m-9Av"/>
+                            <constraint firstItem="6qt-xd-oFo" firstAttribute="trailing" secondItem="2ox-wo-kb1" secondAttribute="trailing" constant="40" id="ocL-Jo-aga"/>
+                            <constraint firstItem="eZW-NA-O0P" firstAttribute="top" secondItem="D4q-3I-1mZ" secondAttribute="bottom" id="pvD-fX-M1o"/>
+                            <constraint firstItem="6qt-xd-oFo" firstAttribute="trailing" secondItem="eZW-NA-O0P" secondAttribute="trailing" id="r7B-1z-hjT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playPauseButton" destination="YqB-tI-heV" id="uy7-W4-zI5"/>
+                        <outlet property="playerContainerView" destination="D4q-3I-1mZ" id="3pe-sX-ZsV"/>
+                        <outlet property="seekSlider" destination="2ox-wo-kb1" id="Wtl-Vl-lYP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zj7-Fe-ybQ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-89.312977099236633" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pause" width="24" height="24"/>
+        <image name="play" width="24" height="24"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
